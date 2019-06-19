@@ -4,7 +4,6 @@
 	</head>
 	<style type="text/css">
 		#div{width: 200px;height: 200px;background-color: blue;}
-		
 	</style>
 	<body>
 		<div id="div"></div>
@@ -13,8 +12,9 @@
 				var obi=document.getElementById(id);
 				var disX=0;
 				var disY=0;
-				obi.onmousedown=function(){
-					
+				obi.onmousedown=function(ev){
+					disX=ev.pageX-obj.offsetLeft;
+					disY=ev.pageY-obj.offsetTop;
 				}
 			}
 		</script>
